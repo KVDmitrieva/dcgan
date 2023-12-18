@@ -37,6 +37,7 @@ def main(n):
     images = to_pil_image(images)
 
     plt.imshow(images)
+    plt.savefig("generated_samples")
 
 
 if __name__ == '__main__':
@@ -49,4 +50,5 @@ if __name__ == '__main__':
         help="Number of samples to generate",
     )
     args = args.parse_args()
-    main(args.prompt)
+    main(args.sample_number)
+
